@@ -76,7 +76,7 @@ const Cursos = () => {
 						<option value="Aula-4">Aula-4</option>
 						<option value="Aula-5">Aula-5</option>
 						<option value="Virtual">Virtual</option>
-					</select>
+					</select>git 
                     <input type='text' name='coste' defaultValue={curso.precio}
 						{...register( 'coste', { pattern:/[0-9]+/, max: 11000, min:1000,  required: true, message: 'Campo requerido' })}/>
 					{errors.coste && errors.coste.type === 'required' && 'Campo coste requerido'}
