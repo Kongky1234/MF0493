@@ -1,8 +1,6 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import "./style.css";
 import Header from "./components/Header";
-require('dotenv').config();
 
 function App() {
 
