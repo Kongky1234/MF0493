@@ -15,7 +15,7 @@ const Cursos = () => {
 	};
 
     const editarCurso = async(id, name, modo, lugar, cost) => {
-        await axios.patch("http://localhost:5000/api/"+"curso/" + id, {
+        await axios.patch(process.env.REACT_APP_BACKEND_URL+"curso/" + id, {
             curso: name,
             opcion: modo,
             aula: lugar,
@@ -32,7 +32,7 @@ const Cursos = () => {
     }
 
     useEffect(() => {
-        axios.post("http://localhost:5000/api/"+"docente/cursos/", {
+        axios.post(process.env.REACT_APP_BACKEND_URL+"docente/cursos/", {
             id: JSON.parse(localStorage.datosUsuario).userId
         },{
 			headers:{

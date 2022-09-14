@@ -14,7 +14,7 @@ const Register = ({ changeUser }) => {
 	};
 
     const crearDocente = async(name, mail, constraseña, active) => {
-        await axios.post("http://localhost:5000/api/"+"docente/", {
+        await axios.post(process.env.REACT_APP_BACKEND_URL+"docente/", {
             nombre: name,
             email: mail,
             password: constraseña,
@@ -28,7 +28,7 @@ const Register = ({ changeUser }) => {
     }
 
     const loginDocente = async(mail, contraseña) => {
-        await axios.post("http://localhost:5000/api/"+"docente/", {
+        await axios.post(process.env.REACT_APP_BACKEND_URL+"docente/", {
             email: mail,
             password: contraseña
         }).then(

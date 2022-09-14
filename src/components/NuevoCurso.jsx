@@ -11,7 +11,7 @@ const NuevoCurso = ({ token }) => {
         await crearCurso(data.nombre, JSON.parse(localStorage.datosUsuario).userId, data.opcion, data.aula, data.coste);
 	};
     const crearCurso = async(name, prof, modo, lugar, cost) => {
-        await axios.post("http://localhost:5000/api/"+"curso/", {
+        await axios.post(process.env.REACT_APP_BACKEND_URL+"curso/", {
             curso: name,
             docente: prof,
             opcion: modo,
